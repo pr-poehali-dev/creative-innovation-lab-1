@@ -202,7 +202,7 @@ export default function BMICalculator() {
   };
 
   return (
-    <section className="bg-neutral-950 py-20 px-6 border-t border-neutral-800">
+    <section className="bg-neutral-950 py-8 px-6">
       <div className="max-w-3xl mx-auto">
         <h3 className="uppercase text-xs tracking-widest text-neutral-500 mb-2">Твой результат</h3>
         <p className="text-2xl lg:text-3xl font-bold text-white mb-10">Калькулятор ИМТ и подбор добавок</p>

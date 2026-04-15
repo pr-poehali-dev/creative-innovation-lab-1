@@ -3,9 +3,10 @@ import { useRef } from "react";
 
 interface HeroProps {
   onQuizOpen?: () => void;
+  onBMIOpen?: () => void;
 }
 
-export default function Hero({ onQuizOpen }: HeroProps) {
+export default function Hero({ onQuizOpen, onBMIOpen }: HeroProps) {
   const container = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: container,
@@ -38,12 +39,20 @@ export default function Hero({ onQuizOpen }: HeroProps) {
         <p className="text-lg md:text-xl max-w-2xl mx-auto opacity-90 mb-10">
           Правильные добавки для твоих целей — сила, масса, выносливость или восстановление
         </p>
-        <button
-          onClick={onQuizOpen}
-          className="bg-green-500 hover:bg-green-400 text-black uppercase tracking-widest text-sm px-8 py-4 font-bold transition-all duration-300 hover:scale-105 rounded-xl"
-        >
-          Подобрать добавки
-        </button>
+        <div className="flex flex-col sm:flex-row gap-3 justify-center">
+          <button
+            onClick={onQuizOpen}
+            className="bg-green-500 hover:bg-green-400 text-black uppercase tracking-widest text-sm px-8 py-4 font-bold transition-all duration-300 hover:scale-105 rounded-xl"
+          >
+            Быстрый подбор
+          </button>
+          <button
+            onClick={onBMIOpen}
+            className="bg-white/10 hover:bg-white/20 text-white border border-white/20 uppercase tracking-widest text-sm px-8 py-4 font-bold transition-all duration-300 hover:scale-105 rounded-xl backdrop-blur-sm"
+          >
+            Детальный подбор
+          </button>
+        </div>
       </div>
     </div>
   );

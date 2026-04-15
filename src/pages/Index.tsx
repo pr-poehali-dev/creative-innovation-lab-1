@@ -6,21 +6,22 @@ import Promo from "@/components/Promo";
 import Footer from "@/components/Footer";
 import QuizModal from "@/components/QuizModal";
 import PixelGame from "@/components/PixelGame";
-import BMICalculator from "@/components/BMICalculator";
+import BMIModal from "@/components/BMIModal";
 
 const Index = () => {
   const [quizOpen, setQuizOpen] = useState(false);
+  const [bmiOpen, setBmiOpen] = useState(false);
 
   return (
     <main className="min-h-screen">
       <Header onQuizOpen={() => setQuizOpen(true)} />
-      <Hero onQuizOpen={() => setQuizOpen(true)} />
+      <Hero onQuizOpen={() => setQuizOpen(true)} onBMIOpen={() => setBmiOpen(true)} />
       <Featured />
       <Promo />
-      <BMICalculator />
       <PixelGame />
       <Footer />
       <QuizModal isOpen={quizOpen} onClose={() => setQuizOpen(false)} />
+      <BMIModal isOpen={bmiOpen} onClose={() => setBmiOpen(false)} />
     </main>
   );
 };
