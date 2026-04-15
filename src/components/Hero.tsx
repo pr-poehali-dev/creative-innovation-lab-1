@@ -40,7 +40,7 @@ export default function Hero({ onQuizOpen }: HeroProps) {
         </p>
         <button
           onClick={onQuizOpen}
-          className="bg-green-500 hover:bg-green-400 text-white uppercase tracking-widest text-sm px-8 py-4 font-bold transition-all duration-300 hover:scale-105"
+          className="bg-green-500 hover:bg-green-400 text-black uppercase tracking-widest text-sm px-8 py-4 font-bold transition-all duration-300 hover:scale-105 rounded-xl"
         >
           Подобрать добавки
         </button>

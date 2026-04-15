@@ -17,7 +17,7 @@ export default function Header({ className, onQuizOpen }: HeaderProps) {
           </a>
           <button
             onClick={onQuizOpen}
-            className="bg-green-500 text-white hover:bg-green-400 transition-colors duration-300 uppercase text-sm px-4 py-2 font-semibold"
+            className="bg-green-500 text-black hover:bg-green-400 transition-colors duration-300 uppercase text-sm px-4 py-2 font-bold rounded-xl"
           >
             Подобрать
           </button>
