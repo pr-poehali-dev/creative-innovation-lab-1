@@ -1,7 +1,11 @@
 import { useScroll, useTransform, motion } from "framer-motion";
 import { useRef } from "react";
 
-export default function Hero() {
+interface HeroProps {
+  onQuizOpen?: () => void;
+}
+
+export default function Hero({ onQuizOpen }: HeroProps) {
   const container = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: container,
@@ -19,19 +23,27 @@ export default function Hero() {
         className="absolute inset-0 w-full h-full"
       >
         <img
-          src="/images/mountain-landscape.jpg"
-          alt="Mountain landscape"
+          src="https://cdn.poehali.dev/projects/6225ff66-cd65-4fb5-b5e6-cdac321acb3b/files/c1075f8a-30f3-47a6-8274-5b83f42ea802.jpg"
+          alt="Спортсмен на вершине"
           className="w-full h-full object-cover"
         />
+        <div className="absolute inset-0 bg-black/40" />
       </motion.div>
 
-      <div className="relative z-10 text-center text-white">
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-6">
-          ОТКРОЙ
+      <div className="relative z-10 text-center text-white px-6">
+        <p className="uppercase tracking-widest text-green-400 text-sm mb-4 font-semibold">Спортивное питание</p>
+        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-6 leading-tight">
+          ДОСТИГАЙ<br/>МАКСИМУМА
         </h1>
-        <p className="text-lg md:text-xl max-w-2xl mx-auto px-6 opacity-90">
-          Исследуй границы дизайна с иммерсивным параллакс-эффектом
+        <p className="text-lg md:text-xl max-w-2xl mx-auto opacity-90 mb-10">
+          Правильные добавки для твоих целей — сила, масса, выносливость или восстановление
         </p>
+        <button
+          onClick={onQuizOpen}
+          className="bg-green-500 hover:bg-green-400 text-white uppercase tracking-widest text-sm px-8 py-4 font-bold transition-all duration-300 hover:scale-105"
+        >
+          Подобрать добавки
+        </button>
       </div>
     </div>
   );
