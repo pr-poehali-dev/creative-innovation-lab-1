@@ -5,6 +5,7 @@ import Featured from "@/components/Featured";
 import Promo from "@/components/Promo";
 import Footer from "@/components/Footer";
 import QuizModal from "@/components/QuizModal";
+import PixelGame from "@/components/PixelGame";
 
 const Index = () => {
   const [quizOpen, setQuizOpen] = useState(false);
@@ -15,6 +16,7 @@ const Index = () => {
       <Hero onQuizOpen={() => setQuizOpen(true)} />
       <Featured />
       <Promo />
+      <PixelGame />
       <Footer />
       <QuizModal isOpen={quizOpen} onClose={() => setQuizOpen(false)} />
     </main>
