@@ -32,7 +32,7 @@ export default function Hero({ onQuizOpen, onBMIOpen }: HeroProps) {
       </motion.div>
 
       <div className="relative z-10 text-center text-white px-6">
-        <p className="uppercase tracking-widest text-green-400 text-sm mb-4 font-semibold">Спортивное питание</p>
+        <p className="uppercase tracking-widest text-blue-300 text-sm mb-4 font-semibold">Спортивное питание</p>
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-6 leading-tight">
           ДОСТИГАЙ<br/>МАКСИМУМА
         </h1>
@@ -42,13 +42,13 @@ export default function Hero({ onQuizOpen, onBMIOpen }: HeroProps) {
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
           <button
             onClick={onQuizOpen}
-            className="bg-green-500 hover:bg-green-400 text-black uppercase tracking-widest text-sm px-8 py-4 font-bold transition-all duration-300 hover:scale-105 rounded-xl"
+            className="bg-blue-400 hover:bg-blue-300 text-white uppercase tracking-widest text-sm px-8 py-4 font-bold transition-all duration-300 hover:scale-105 rounded-xl"
           >
             Быстрый подбор
           </button>
           <button
             onClick={onBMIOpen}
-            className="bg-green-500 hover:bg-green-400 text-black uppercase tracking-widest text-sm px-8 py-4 font-bold transition-all duration-300 hover:scale-105 rounded-xl"
+            className="bg-blue-400 hover:bg-blue-300 text-white uppercase tracking-widest text-sm px-8 py-4 font-bold transition-all duration-300 hover:scale-105 rounded-xl"
           >
             Детальный подбор
           </button>

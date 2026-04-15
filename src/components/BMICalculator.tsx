@@ -120,7 +120,7 @@ const RECOMMENDATIONS: Record<string, Recommendation> = {
 };
 
 const colorMap: Record<string, string> = {
-  green: "bg-green-500/10 text-green-400 border-green-500/20",
+  green: "bg-blue-400/10 text-blue-300 border-blue-400/20",
   blue: "bg-blue-500/10 text-blue-400 border-blue-500/20",
   purple: "bg-purple-500/10 text-purple-400 border-purple-500/20",
   yellow: "bg-yellow-500/10 text-yellow-400 border-yellow-500/20",
@@ -142,7 +142,7 @@ function getBMICategory(bmi: number): BMICategory {
 
 const categoryInfo: Record<BMICategory, { label: string; desc: string; color: string; bar: string }> = {
   deficit: { label: "Дефицит массы тела", desc: "ИМТ ниже 18.5", color: "text-blue-400", bar: "bg-blue-500" },
-  normal: { label: "Норма", desc: "ИМТ 18.5 — 24.9", color: "text-green-400", bar: "bg-green-500" },
+  normal: { label: "Норма", desc: "ИМТ 18.5 — 24.9", color: "text-blue-300", bar: "bg-blue-400" },
   overweight: { label: "Избыточный вес", desc: "ИМТ 25 — 29.9", color: "text-yellow-400", bar: "bg-yellow-500" },
   obese: { label: "Ожирение", desc: "ИМТ 30 и выше", color: "text-red-400", bar: "bg-red-500" },
 };
@@ -154,7 +154,7 @@ function BMIBar({ bmi }: { bmi: number }) {
     <div className="relative mt-4">
       <div className="h-3 rounded-full overflow-hidden flex">
         <div className="flex-1 bg-blue-500/70" />
-        <div className="flex-1 bg-green-500/70" />
+        <div className="flex-1 bg-blue-400/70" />
         <div className="flex-1 bg-yellow-500/70" />
         <div className="flex-1 bg-red-500/70" />
       </div>
@@ -219,7 +219,7 @@ export default function BMICalculator() {
                   value={height}
                   onChange={(e) => setHeight(e.target.value)}
                   placeholder="175"
-                  className="w-full bg-neutral-800 border border-neutral-700 rounded-xl px-4 py-3 text-white text-lg focus:outline-none focus:border-green-500 transition-colors"
+                  className="w-full bg-neutral-800 border border-neutral-700 rounded-xl px-4 py-3 text-white text-lg focus:outline-none focus:border-blue-400 transition-colors"
                 />
               </div>
               <div>
@@ -229,14 +229,14 @@ export default function BMICalculator() {
                   value={weight}
                   onChange={(e) => setWeight(e.target.value)}
                   placeholder="70"
-                  className="w-full bg-neutral-800 border border-neutral-700 rounded-xl px-4 py-3 text-white text-lg focus:outline-none focus:border-green-500 transition-colors"
+                  className="w-full bg-neutral-800 border border-neutral-700 rounded-xl px-4 py-3 text-white text-lg focus:outline-none focus:border-blue-400 transition-colors"
                 />
               </div>
             </div>
             <button
               onClick={calculate}
               disabled={!height || !weight}
-              className="w-full bg-green-500 hover:bg-green-400 disabled:bg-neutral-700 disabled:text-neutral-500 text-black font-bold py-4 rounded-xl transition-colors text-base"
+              className="w-full bg-blue-400 hover:bg-blue-300 disabled:bg-neutral-700 disabled:text-neutral-500 text-white font-bold py-4 rounded-xl transition-colors text-base"
             >
               Рассчитать ИМТ
             </button>
@@ -258,7 +258,7 @@ export default function BMICalculator() {
             </div>
             <BMIBar bmi={bmi} />
             <div className="flex gap-3 pt-2">
-              <button onClick={() => setStep("quiz")} className="flex-1 bg-green-500 hover:bg-green-400 text-black font-bold py-3 rounded-xl transition-colors">
+              <button onClick={() => setStep("quiz")} className="flex-1 bg-blue-400 hover:bg-blue-300 text-white font-bold py-3 rounded-xl transition-colors">
                 Подобрать добавки →
               </button>
               <button onClick={reset} className="px-5 py-3 bg-neutral-800 hover:bg-neutral-700 text-white rounded-xl transition-colors">
@@ -274,7 +274,7 @@ export default function BMICalculator() {
             <div className="flex items-center gap-3 mb-6">
               <span className={`text-sm font-semibold px-3 py-1 rounded-full border ${
                 category === "deficit" ? "bg-blue-500/10 text-blue-400 border-blue-500/20" :
-                category === "normal" ? "bg-green-500/10 text-green-400 border-green-500/20" :
+                category === "normal" ? "bg-blue-400/10 text-blue-300 border-blue-400/20" :
                 category === "overweight" ? "bg-yellow-500/10 text-yellow-400 border-yellow-500/20" :
                 "bg-red-500/10 text-red-400 border-red-500/20"
               }`}>
@@ -287,10 +287,10 @@ export default function BMICalculator() {
                 <button
                   key={opt.key}
                   onClick={() => { setQuizAnswer(opt.key); setStep("rec"); }}
-                  className="w-full text-left px-5 py-4 bg-neutral-800 hover:bg-neutral-700 border border-neutral-700 hover:border-green-500/50 text-white rounded-xl transition-all group"
+                  className="w-full text-left px-5 py-4 bg-neutral-800 hover:bg-neutral-700 border border-neutral-700 hover:border-blue-400/50 text-white rounded-xl transition-all group"
                 >
                   <span className="flex items-center gap-3">
-                    <Icon name="ChevronRight" size={16} className="text-neutral-500 group-hover:text-green-400 transition-colors" />
+                    <Icon name="ChevronRight" size={16} className="text-neutral-500 group-hover:text-blue-300 transition-colors" />
                     {opt.label}
                   </span>
                 </button>
@@ -326,7 +326,7 @@ export default function BMICalculator() {
             </div>
 
             <div className="flex gap-3">
-              <button onClick={reset} className="flex-1 bg-green-500 hover:bg-green-400 text-black font-bold py-4 rounded-xl transition-colors">
+              <button onClick={reset} className="flex-1 bg-blue-400 hover:bg-blue-300 text-white font-bold py-4 rounded-xl transition-colors">
                 Рассчитать снова
               </button>
               <button onClick={() => setStep("quiz")} className="px-5 py-4 bg-neutral-800 hover:bg-neutral-700 text-white rounded-xl transition-colors">

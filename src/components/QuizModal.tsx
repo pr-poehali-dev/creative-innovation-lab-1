@@ -45,7 +45,7 @@ const recommendations: Record<string, { name: string; desc: string; color: strin
     { name: "Креатин", desc: "Увеличит силу и позволит прогрессировать быстрее", color: "bg-purple-500/10 text-purple-400 border-purple-500/20", icon: "Zap" },
   ],
   fat: [
-    { name: "L-Карнитин", desc: "Запустит процесс жиросжигания при кардио-нагрузках", color: "bg-green-500/10 text-green-400 border-green-500/20", icon: "Flame" },
+    { name: "L-Карнитин", desc: "Запустит процесс жиросжигания при кардио-нагрузках", color: "bg-blue-400/10 text-blue-300 border-blue-400/20", icon: "Flame" },
     { name: "Протеин", desc: "Сохранит мышцы при дефиците калорий", color: "bg-blue-500/10 text-blue-400 border-blue-500/20", icon: "Dumbbell" },
     { name: "BCAA", desc: "Защитит мышцы от разрушения во время сушки", color: "bg-pink-500/10 text-pink-400 border-pink-500/20", icon: "Activity" },
   ],
@@ -56,7 +56,7 @@ const recommendations: Record<string, { name: string; desc: string; color: strin
   ],
   endurance: [
     { name: "BCAA", desc: "Обеспечат энергию и замедлят усталость при длительных нагрузках", color: "bg-pink-500/10 text-pink-400 border-pink-500/20", icon: "Activity" },
-    { name: "L-Карнитин", desc: "Улучшит использование жира как источника энергии", color: "bg-green-500/10 text-green-400 border-green-500/20", icon: "Flame" },
+    { name: "L-Карнитин", desc: "Улучшит использование жира как источника энергии", color: "bg-blue-400/10 text-blue-300 border-blue-400/20", icon: "Flame" },
     { name: "Предтреники", desc: "Поднимут выносливость и отсрочат наступление усталости", color: "bg-red-500/10 text-red-400 border-red-500/20", icon: "Wind" },
   ],
 };
@@ -115,7 +115,7 @@ export default function QuizModal({ isOpen, onClose }: QuizModalProps) {
                   {questions.map((_, i) => (
                     <div
                       key={i}
-                      className={`h-1 flex-1 rounded-full transition-all duration-300 ${i <= step ? "bg-green-500" : "bg-neutral-700"}`}
+                      className={`h-1 flex-1 rounded-full transition-all duration-300 ${i <= step ? "bg-blue-400" : "bg-neutral-700"}`}
                     />
                   ))}
                 </div>
@@ -132,13 +132,13 @@ export default function QuizModal({ isOpen, onClose }: QuizModalProps) {
                     <button
                       key={opt.value}
                       onClick={() => handleAnswer(opt.value)}
-                      className="flex items-center gap-4 bg-neutral-800 hover:bg-neutral-700 border border-neutral-700 hover:border-green-500/50 p-4 rounded-xl text-left transition-all group"
+                      className="flex items-center gap-4 bg-neutral-800 hover:bg-neutral-700 border border-neutral-700 hover:border-blue-400/50 p-4 rounded-xl text-left transition-all group"
                     >
-                      <div className="w-10 h-10 rounded-xl bg-neutral-700 group-hover:bg-green-500/20 border border-neutral-600 group-hover:border-green-500/40 flex items-center justify-center flex-shrink-0 transition-all">
-                        <Icon name={opt.icon as "Home"} size={18} className="text-neutral-400 group-hover:text-green-400 transition-colors" />
+                      <div className="w-10 h-10 rounded-xl bg-neutral-700 group-hover:bg-blue-400/20 border border-neutral-600 group-hover:border-blue-400/40 flex items-center justify-center flex-shrink-0 transition-all">
+                        <Icon name={opt.icon as "Home"} size={18} className="text-neutral-400 group-hover:text-blue-300 transition-colors" />
                       </div>
                       <span className="font-medium text-white text-sm">{opt.label}</span>
-                      <Icon name="ChevronRight" size={16} className="text-neutral-600 group-hover:text-green-400 transition-colors ml-auto" />
+                      <Icon name="ChevronRight" size={16} className="text-neutral-600 group-hover:text-blue-300 transition-colors ml-auto" />
                     </button>
                   ))}
                 </div>
@@ -146,8 +146,8 @@ export default function QuizModal({ isOpen, onClose }: QuizModalProps) {
             ) : (
               <div className="p-8">
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="w-10 h-10 rounded-xl bg-green-500/10 border border-green-500/20 flex items-center justify-center">
-                    <Icon name="CheckCheck" size={20} className="text-green-400" />
+                  <div className="w-10 h-10 rounded-xl bg-blue-400/10 border border-blue-400/20 flex items-center justify-center">
+                    <Icon name="CheckCheck" size={20} className="text-blue-300" />
                   </div>
                   <div>
                     <p className="text-xs uppercase tracking-widest text-neutral-500">Результат</p>
@@ -178,7 +178,7 @@ export default function QuizModal({ isOpen, onClose }: QuizModalProps) {
                   </button>
                   <button
                     onClick={onClose}
-                    className="flex-1 bg-green-500 hover:bg-green-400 text-black font-bold py-3 rounded-xl transition-colors text-sm"
+                    className="flex-1 bg-blue-400 hover:bg-blue-300 text-white font-bold py-3 rounded-xl transition-colors text-sm"
                   >
                     Отлично!
                   </button>
