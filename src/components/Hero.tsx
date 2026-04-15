@@ -24,7 +24,7 @@ export default function Hero({ onQuizOpen, onBMIOpen }: HeroProps) {
         className="absolute inset-0 w-full h-full"
       >
         <img
-          src="https://cdn.poehali.dev/projects/6225ff66-cd65-4fb5-b5e6-cdac321acb3b/files/c1075f8a-30f3-47a6-8274-5b83f42ea802.jpg"
+          src="https://cdn.poehali.dev/projects/6225ff66-cd65-4fb5-b5e6-cdac321acb3b/bucket/b8ad141a-7948-4c42-b258-0bfd3f19ce2b.png"
           alt="Спортсмен на вершине"
           className="w-full h-full object-cover"
         />
