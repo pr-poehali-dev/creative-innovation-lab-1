@@ -51,13 +51,13 @@ export default function Footer() {
                 </a>
               </div>
             </div>
-            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4 sm:gap-0">
+            <div className="flex flex-col items-start">
               <h1 className="text-[18vw] sm:text-[16vw] lg:text-[14vw] leading-[0.8] mt-4 sm:mt-6 lg:mt-10 text-white font-bold tracking-tight">
                 SPORT<span className="text-green-500">FUEL</span>
               </h1>
-              <div className="text-left">
-                <p className="text-neutral-500 text-xs mb-1">Создано в рамках проекта «Спортивные добавки, друзья или враги?» · 15.04.2026</p>
-                <p className="text-white text-sm sm:text-base">{new Date().getFullYear()} SportFuel</p>
+              <div className="mt-3 flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4">
+                <p className="text-neutral-500 text-xs">Создано в рамках проекта «Спортивные добавки, друзья или враги?» · 15.04.2026</p>
+                <p className="text-neutral-600 text-xs">{new Date().getFullYear()} SportFuel</p>
               </div>
             </div>
           </div>
