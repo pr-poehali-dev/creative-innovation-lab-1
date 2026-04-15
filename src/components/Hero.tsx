@@ -48,7 +48,7 @@ export default function Hero({ onQuizOpen, onBMIOpen }: HeroProps) {
           </button>
           <button
             onClick={onBMIOpen}
-            className="bg-white/10 hover:bg-white/20 text-white border border-white/20 uppercase tracking-widest text-sm px-8 py-4 font-bold transition-all duration-300 hover:scale-105 rounded-xl backdrop-blur-sm"
+            className="bg-green-500 hover:bg-green-400 text-black uppercase tracking-widest text-sm px-8 py-4 font-bold transition-all duration-300 hover:scale-105 rounded-xl"
           >
             Детальный подбор
           </button>

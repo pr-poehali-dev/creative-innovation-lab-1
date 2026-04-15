@@ -14,7 +14,7 @@ const Index = () => {
 
   return (
     <main className="min-h-screen">
-      <Header onQuizOpen={() => setQuizOpen(true)} />
+      <Header onQuizOpen={() => setQuizOpen(true)} onBMIOpen={() => setBmiOpen(true)} />
       <Hero onQuizOpen={() => setQuizOpen(true)} onBMIOpen={() => setBmiOpen(true)} />
       <Featured />
       <Promo />
