@@ -55,9 +55,9 @@ export default function Footer() {
               <h1 className="text-[18vw] sm:text-[16vw] lg:text-[14vw] leading-[0.8] mt-4 sm:mt-6 lg:mt-10 text-white font-bold tracking-tight">
                 SPORT<span className="text-green-500">FUEL</span>
               </h1>
-              <div className="text-right">
+              <div className="text-left">
+                <p className="text-neutral-500 text-xs mb-1">Создано в рамках проекта «Спортивные добавки, друзья или враги?» · 15.04.2026</p>
                 <p className="text-white text-sm sm:text-base">{new Date().getFullYear()} SportFuel</p>
-                <p className="text-neutral-500 text-xs mt-1">Создано в рамках проекта «Спортивные добавки, друзья или враги?» · 15.04.2026</p>
               </div>
             </div>
           </div>
